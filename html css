@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohith Putti</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            border-bottom: 1px solid #eaeaea;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+            border-left: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 50px 20px;
+            gap: 15px;
+            transition: right 0.5s ease-in-out;
+            z-index: 5;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        #menu-toggle:checked ~ .menu {
+            right: 0;
+        }
+
+        #menu-toggle:checked + .hamburger .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        #menu-toggle:checked + .hamburger .line2 {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked + .hamburger .line3 {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        #menu-toggle:not(:checked) + .hamburger .line1,
+        #menu-toggle:not(:checked) + .hamburger .line3 {
+            transform: rotate(0);
+        }
+
+        #menu-toggle:not(:checked) + .hamburger .line2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RP</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </label>
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="#work">Work Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#blog">Blog</a>
+        </div>
+    </header>
+    <section class="intro">
+        <h1>Rohith Putti</h1>
+        <p>Engineer | Innovator | Problem Solver</p>
+        <p>Hi, I'm Rohith Putti, an Engineer with a passion for solving complex problems and driving innovation. With expertise in Industrial Engineering, Lean Manufacturing, and Additive Manufacturing, I create impactful solutions.</p>
+        <a href="#about">Know more &rarr;</a>
+    </section>
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <p>I am a dedicated engineer with a focus on Industrial Engineering, Lean Manufacturing, and Additive Manufacturing. My goal is to optimize workflows and develop innovative solutions to complex challenges.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Rohith Putti. All rights reserved.</p>
+    </footer>
+</body>
+</html>
